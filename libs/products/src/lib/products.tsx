@@ -1,5 +1,4 @@
 import styles from './products.module.scss';
-import { Orders } from '@react-monorepo/orders';
 
 export function Products() {
   return (
