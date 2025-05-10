@@ -12,13 +12,15 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": { "targetName": "typecheck" },
+        "typecheck": {
+          "targetName": "typecheck"
+        },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -48,11 +50,30 @@
         "watchDepsTargetName": "watch-deps"
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
   ],
-  "targetDefaults": { "test": { "dependsOn": ["^build"] } },
+  "targetDefaults": {
+    "test": {
+      "dependsOn": ["^build"]
+    }
+  },
   "generators": {
     "@nx/react": {
       "application": {
@@ -61,7 +82,9 @@
         "linter": "eslint",
         "bundler": "webpack"
       },
-      "component": { "style": "scss" },
+      "component": {
+        "style": "scss"
+      },
       "library": {
         "style": "scss",
         "linter": "eslint",
