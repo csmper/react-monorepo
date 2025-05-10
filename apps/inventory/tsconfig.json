@@ -6,9 +6,6 @@
       "path": "../../libs/products"
     },
     {
-      "path": "../../libs/orders"
-    },
-    {
       "path": "./tsconfig.app.json"
     },
     {

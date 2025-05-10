@@ -32,9 +32,6 @@
   "references": [
     {
       "path": "../../libs/products/tsconfig.lib.json"
-    },
-    {
-      "path": "../../libs/orders/tsconfig.lib.json"
     }
   ]
 }
